@@ -69,8 +69,7 @@ section{
     border-radius: 7px;  
     width: 300px; 
     height: 450px;   
-    justify-content: center;
-    align-items: center; 
+    justify-content: center;   
     z-index: 3;  
 }    
 
@@ -84,6 +83,12 @@ section{
 }
 
 /* CHARACTERS */
+
+#characters{
+    background-color: #c4c4c4;
+    display: flex;
+    
+}
 
 #characters .page-toggle{
     display: flex;
@@ -144,6 +149,8 @@ h2{
     width: 100%;
     height: 400px;
     background-color:#c4c4c4;
+    display: flex;
+    flex-direction: column;
 }
 
 .active{
@@ -168,6 +175,7 @@ h2{
     width: 100%;
     padding: 10px;    
     display: flex; 
+    flex-direction: column;
 }
 
 .other-info{
@@ -177,6 +185,7 @@ h2{
     width: 100%;
     color: white; 
     display: flex;
+    flex-direction: column;
 }
 
 .attributes div{
@@ -210,11 +219,8 @@ h2{
 
 }
 
-
-/* HTML: <div class="loader"></div> */
 .loader { 
-    align-self: center;   
-    margin: 0 auto;
+    margin: auto;
     width: 30px;
     padding: 3px;
     aspect-ratio: 1;
@@ -231,3 +237,13 @@ h2{
   }
   @keyframes l3 {to{transform: rotate(1turn)}}
 
+  .char-names-loader{    
+   height: 40px;
+   width: 32px;
+   position: relative;
+   top: 150px;
+  }
+
+  .hider{
+    display:none;
+  }
