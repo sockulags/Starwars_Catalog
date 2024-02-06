@@ -1,0 +1,233 @@
+:root{
+    --header-text-clr: #FFD600;
+    --text1-clr: #FFFFFF;    
+    --text2-clr: #535556;
+    --bg1-clr: #8E8E8E;
+    --bg2-clr: #E1DEDE;
+    --bg3-clr: #444444;
+    --background-clr: #424242;
+    --nav-clr: #424242;
+    --char-header-clr: #535556;
+    --details-header-clr: #748687;
+    --details-bg1-clr: #c4c4c4;
+    --details-bg2-clr: #8e8e8e;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Ropa Sans', sans-serif;
+   
+}
+
+html, body{
+    min-width: 300px;
+    background-color: var(--background-clr);
+    overflow-x: hidden;
+}
+
+
+header{  
+    overflow: hidden;
+    height: 300px;  
+}
+
+h1{
+   color: var(--header-text-clr);
+   font-size: 64px;
+   z-index: 2;
+   top: 50%;
+   left: 40px;
+   position: relative;   
+   margin:0;
+   transform: translateY(-50%);  
+}
+
+header img {
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%) translateY(-50%); 
+    height: 320px; 
+    object-fit: cover;
+}
+
+main{
+    display: flex;     
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 3;  
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    top: -20px;
+}
+
+section{    
+    display: flex;
+    flex-direction: column;   
+    align-items: center;      
+    border-radius: 7px;  
+    width: 300px; 
+    height: 450px;   
+    justify-content: center;
+    align-items: center; 
+    z-index: 3;  
+}    
+
+.char-name{ 
+    height: 30px;
+    font-size: 14px;
+    padding: 5px;
+    padding-left: 10px;
+    cursor: pointer;  
+    letter-spacing: 1.3px;     
+}
+
+/* CHARACTERS */
+
+#characters .page-toggle{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;   
+    height: 90px;
+    padding-top: 20px;
+    background-color: #c4c4c4;
+    align-self: flex-end;    
+    width: 100%;
+}
+
+#characters .page-toggle span{   
+    width: auto;
+    margin: 3px;
+
+   
+}
+
+.previous, .next{
+     cursor: pointer;
+}
+
+.pages{
+    letter-spacing: 3px;
+    width: 100%;
+}
+h2{
+    color:#FFD600;   
+    padding: 7px;
+    height:50px;
+    padding-bottom: 10px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    border-radius: 7px 7px 0 0;
+    background-color: var(--details-header-clr);
+    margin: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+#characters h2{
+    color:#FFD600;   
+    background-color: var(--char-header-clr);
+}
+
+#characters .char-name:nth-child(2n+1) {
+    background-color: var(--bg2-clr);
+    color: var(--text2-clr);   
+}
+
+#characters .char-name:nth-child(2n) {
+    background-color: var(--bg1-clr);
+    color: #ffffff;
+}
+
+.char-names{
+    width: 100%;
+    height: 400px;
+    background-color:#c4c4c4;
+}
+
+.active{
+    background-color: var(--bg3-clr);
+    color: #ffffff;
+}
+
+/* DETAILS */
+
+#details .other-info h3,
+#details .char-info h3{
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+   
+}
+
+.char-info{
+    background-color: #c4c4c4;
+    height: 230px;
+    width: 100%;
+    padding: 10px;    
+    display: flex; 
+}
+
+.other-info{
+    background-color: #8e8e8e;
+    height: 230px;
+    padding: 10px;
+    width: 100%;
+    color: white; 
+    display: flex;
+}
+
+.attributes div{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    display: flex;
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    header {
+        height: 350px;      
+    }
+    header img{
+        height: 420px;
+    }
+
+}
+
+@media screen and (min-width: 1500px) {
+    header {
+        height: 375px;      
+    }
+    header img{
+        height: 475px;
+    }
+
+
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader { 
+    align-self: center;   
+    margin: 0 auto;
+    width: 30px;
+    padding: 3px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--char-header-clr);
+    --_m: 
+      conic-gradient(#0000 10%,#000),
+      linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    -webkit-mask-composite: source-out;
+            mask-composite: subtract;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {to{transform: rotate(1turn)}}
+
