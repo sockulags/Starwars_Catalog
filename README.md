@@ -1,7 +1,7 @@
 # Starwars Catalog
 
-### Repo
-Here is the repo that you can fork: [Star Wars Catalog](https://github.com/Lexicon-Frontend-React-2023-2024/exercise-starwars-catalog/tree/main)
+### Results
+Here is the result of the assignment: [Star Wars Catalog](https://sockulags.github.io/Starwars_Catalog/)
 
 ### Mockup
 
